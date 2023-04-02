@@ -281,5 +281,5 @@ function emptyTBR(){
 }
 
 function defaultDescription(){
-    document.querySelector('#reccDescription').innerHTML = "Description could not be retrieved. There might be no description provided by the API. You might also be offline or the book does not provide an ISBN (kindle edition books)."
+    document.querySelector('#reccDescription').innerHTML = "A description could not be retrieved."
 }
