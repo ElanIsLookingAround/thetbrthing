@@ -32,7 +32,7 @@ function loadCover(source){
     if(!$(cover).hasClass('blur')){
         $(cover).addClass('blur');
     }
-    if(source == '../img/defaultcover.jpg'){
+    if(source == 'defaultcover.jpg'){
         setTimeout(()=>{
             cover.src = source;
         }, 100)
