@@ -114,7 +114,7 @@ function getRecommendation(){
 
         var number = Math.floor(Math.random() * (candidates.length - 0) + 0);   
         var recommendation = candidates[number];
-        var bookcover = '../img/defaultcover.jpg'
+        var bookcover = 'defaultcover.jpg'
         if(recommendation.hasOwnProperty('isbn')){
             $('#reccDescription').addClass('blur');
             const bUrl = apiString + recommendation['isbn'];
