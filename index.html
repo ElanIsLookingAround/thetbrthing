@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA Compatible" content="ie-edge">
+        <meta http-equiv="Content-Security-Policy" content="script-src 'self';" />
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/compiled.css">
+        <link href='https://fonts.googleapis.com/css?family=DM Serif Display' rel='stylesheet'>
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery.csv.min.js"></script>
+        <script src="js/chooser.js" defer></script>
+        <title>The Thing That Chose Your TBR - Goodreads Edition</title>
+    </head>
+    <body class="bg-transparent align-items-center">
+    
+        <div class="h-adaptable" id="motherbox">
+            <div id="galaxy">
+                <div class="h-0">
+                    <div id="stars"></div>  
+                    <div id="stars2"></div>
+                    <div id="stars3"></div>
+                </div>
+            </div>
+                
+    
+            <div class="d-flex flex-column container h-adaptable text-light justify-content-center align-items-center pt-4">
+    
+                <div class="container m-auto align-items-center" id="bookform">
+                
+                    <div class="mx-auto w-75 card glass p-3 text-center">
+                        <h1 class="m-0 title">The Thing That Chose Your TBR.  <small>Goodreads Edition</small></h1>
+                        <p>Invoking cosmic horrors <i>just to choose</i>? I don't know if you're brave or foolish. My money's on both.</p>
+                        <hr>
+
+                        <div class="mb-2 mt-3 mx-3">
+                            <label class="form-label">1. 🚚 <a href="https://www.goodreads.com/review/import" target="_blank">Export your Goodreads library.</a> From the link, select the button labelled 'Export Library'. Then click on the generated link to download your library.</label>
+                        </div>
+                        <div class="mb-4 mt-2 mx-3">
+                            <label for="library" class="form-label">2. 🏛️ Select your Goodreads library!</label>
+                            <input type="file" accept=".csv" id="library" class="form-control"/>
+                        </div>
+    
+                        <div class="mb-4 mx-3">
+                            <label for="shelf" class="form-label">3. Specify a specific shelf to choose from. (OPTIONAL)</label>
+                            <input type="text" id="shelf" class="form-control" placeholder="i.e cthulu-mythos. Leave blank to choose from entire library">
+                        </div>
+    
+                        <div class="form-check">
+                            <input type="checkbox" id="includeRead" class="form-check-input no-float">
+                            <label class="form-check-label" for="includeRead">
+                              Include books you've already read (reread)
+                            </label>
+                        </div>
+
+                        <div class="container my-1 align-items-center text-center">
+                            <button id="btnChoose" data-tilt class="hero-btn btn">Let <i>it</i> decide! 🔮</button>
+                        </div>
+                    
+                    </div>
+        
+                </div>
+        
+                <div class="container card w-75 m-auto p-2 position-relative glass" id="recommended" style="display: none;box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.26);">
+                    <div class="container text-center" id="recommendedContents">
+                        <h5 class="text-start">🔖 It chose:</h5>
+                        <div class="row pt-4">
+                            <div class="col-md-4 mx-auto">
+                                <div class="container h-250 p-1 position-relative" >
+                                    <img class="h-100 transition " data-tilt alt="bookcover" id="cover" src="defaultcover.jpg">
+                                </div>
+                                <a href="" id="lnk-goodreads" target="_blank">view on <b>goodreads 🔗</b></a>
+                            </div>
+                            <div class="col-md-8">
+                                <h3 id="reccTitle" class="mb-0"></h3>
+                                <p id="reccAuthor" class="mt-0"></p>
+                                <hr/>
+                                <div class="row">
+                                    <p class="col-6" id="reccYear"></p>
+                                    <p class="col-6" id="reccRating"></p>
+                                </div>
+                                <p class="h-stunted" id="reccDescription"></p>
+                            </div>
+                        </div>
+                        <div class="container my-1">
+                            <button id="btnReChoose" data-tilt class="hero-btn btn">🍺 Another!</button>
+                        </div>
+                        <div class="container">
+                            <button id="btnHome" class="btn " style="border:none;">Return home</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <p id='credits' class="mt-2 text-light text-center"><small>Developed by ElanIsLookingAround • Acknowledgements: Parallax Stars by Sarensh Sinha • Galaxy Background by Suzy Hazelwood • Tilt.js by Gijs Rogé</small></p>
+    
+            </div>
+        </div>
+
+
+        <script src="js/tilt.jquery.js" defer></script>
+    </body>
+</html>
