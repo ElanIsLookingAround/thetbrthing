@@ -13,13 +13,12 @@ ___"Any consequences for invoking a cosmic horror?"___ _you say?_  ___Absolutely
 
 
 #### About the program
-A simple app that selects a random book from your exported Goodreads Library (.csv) and presents it neatly because-&nbsp;&nbsp;&nbsp;a&nbsp; e&nbsp; s&nbsp; t&nbsp; h&nbsp; e&nbsp; t&nbsp; i&nbsp; c&nbsp; s&nbsp; .  
+A simple app that selects a random book from an exported Goodreads Library (.csv), with a cosmic-horror theme because-&nbsp;&nbsp;&nbsp;a&nbsp; e&nbsp; s&nbsp; t&nbsp; h&nbsp; e&nbsp; t&nbsp; i&nbsp; c&nbsp; s&nbsp; .  
 Useful for those times when you can't seem to choose a book from your ever-growing TBR! (We've all been there!)  
 
-The application is built using Tauri + pure Javascript/JQuery. It uses the Google Books API to retrieve the description and cover image of the chosen book.  
+It uses the Google Books API to retrieve the description and cover image of the chosen book.  
 
 If you're wondering, your library (.csv) will not be uploaded anywhere. The application merely reads the file to build a list of possible books to choose from. It does not modify or send it someplace else. Feel free to review the code as you like.  
-
 
 ___
 
