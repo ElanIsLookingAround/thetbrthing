@@ -7,6 +7,7 @@ const library = document.querySelector("#library");
 const shelf = document.querySelector('#shelf');
 const checkbox = document.querySelector('#includeRead');
 var candidates = [];
+const defaultcover = "defaultcover.jpg"
 
 window.onload = function(){
     $('.hero-btn').tilt({
@@ -32,7 +33,7 @@ function loadCover(source){
     if(!$(cover).hasClass('blur')){
         $(cover).addClass('blur');
     }
-    if(source == 'defaultcover.jpg'){
+    if(source == defaultcover){
         setTimeout(()=>{
             cover.src = source;
         }, 100)
@@ -114,7 +115,7 @@ function getRecommendation(){
 
         var number = Math.floor(Math.random() * (candidates.length - 0) + 0);   
         var recommendation = candidates[number];
-        var bookcover = 'defaultcover.jpg'
+        var bookcover = defaultcover
         if(recommendation.hasOwnProperty('isbn')){
             $('#reccDescription').addClass('blur');
             const bUrl = apiString + recommendation['isbn'];
@@ -256,7 +257,7 @@ function toggleAnother(){
 
 // Reccomended div functions
 function resetRecc(){
-    loadCover("../img/defaultcover.jpg");
+    loadCover(defaultcover);
     document.querySelector('#reccTitle').innerHTML = 'Title'
     document.querySelector('#reccAuthor').innerHTML = 'Author'
     document.querySelector('#reccDescription').innerHTML = 'Description'
@@ -269,7 +270,7 @@ function resetRecc(){
     $("#btnReChoose").attr("disabled", false);
 }
 function emptyTBR(){
-    loadCover("../img/defaultcover.jpg");
+    loadCover(defaultcover);
     document.querySelector('#reccTitle').innerHTML = 'None Found!'
     document.querySelector('#reccAuthor').innerHTML = 'Hooray!'
     document.querySelector('#reccDescription').innerHTML = 'Hooray! Your TBR is empty. Time to add more 📚!'
@@ -278,6 +279,7 @@ function emptyTBR(){
     $('#lnk-goodreads').addClass("disabled");
     $("#btnReChoose").attr("disabled", true);
 }
+
 function defaultDescription(){
     document.querySelector('#reccDescription').innerHTML = "Description could not be retrieved. There might be no description provided by the API. You might also be offline or the book does not provide an ISBN (kindle edition books)."
 }
