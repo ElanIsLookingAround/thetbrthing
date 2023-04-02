@@ -1,6 +1,6 @@
 <a href='https://ko-fi.com/J3J4J3EBK' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi3.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
-<h1>The Thing That Chose Your TBR <img src='src-tauri/icons/32x32.png' alt='logo'/></h1>  
+<h1>The Thing That Chose Your TBR <img src='img/32x32.png' alt='logo'/></h1>  
 
 ![appgif](https://media.giphy.com/media/qcr09hmm4gFvS12Q2S/giphy.gif)  
 
